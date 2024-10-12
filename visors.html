@@ -30,10 +30,10 @@
                 <div class="collapse navbar-collapse" id="navbar_links">
                     <ul class="navbar-nav nav-underline me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Hats</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Hats</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="visors.html">Visors</a>
+                            <a class="nav-link active" href="visors.html">Visors</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="nameplates.html">Nameplates</a>
@@ -48,7 +48,7 @@
         <div class="container px-4">
             <div class="row gx-5 align-items-start">
                 <div class="col">
-                    <form id="hatform" class="was-validated">
+                    <form id="visorform" class="was-validated">
                         <div class="row mb-3">
                             <label for="author" class="col-sm-3 col-form-label col-form-label">Author</label>
                             <div class="col-sm-9">
@@ -75,16 +75,6 @@
                             <label class="form-check-label" for="adaptive">Adaptive</label>
                         </div>
 
-                        <div class="form-check form-switch form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="bounce">
-                            <label class="form-check-label" for="bounce">Bounce</label>
-                        </div>
-
-                        <div class="form-check form-switch form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="behind">
-                            <label class="form-check-label" for="behind">Behind</label>
-                        </div>
-
                         <div class="row mb-3">
                             <label for="main-image" class="col-sm-3 col-form-label col-form-label">Main Image</label>
                             <div class="col-sm-9">
@@ -101,32 +91,8 @@
                             <div class="d-none" id="flip-image-md5"></div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="back-image" class="col-sm-3 col-form-label col-form-label">Back Image</label>
-                            <div class="col-sm-9">
-                                <input type="file" class="form-control" id="back-image" aria-label="file example">
-                            </div>
-                            <div class="d-none" id="back-image-md5"></div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="backflip-image" class="col-sm-3 col-form-label col-form-label">Back Flip Image</label>
-                            <div class="col-sm-9">
-                                <input type="file" class="form-control" id="backflip-image" aria-label="file example">
-                            </div>
-                            <div class="d-none" id="backflip-image-md5"></div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="climb-image" class="col-sm-3 col-form-label col-form-label">Climb Image</label>
-                            <div class="col-sm-9">
-                                <input type="file" class="form-control" id="climb-image" aria-label="file example">
-                            </div>
-                            <div class="d-none" id="climb-image-md5"></div>
-                        </div>
-
                         <div class="mb-3">
-                            <button class="btn btn-primary" type="submit" id="hatform-button">Generate JSON</button>
+                            <button class="btn btn-primary" type="submit" id="visorform-button">Generate JSON</button>
                         </div>
                     </form>
                 </div>

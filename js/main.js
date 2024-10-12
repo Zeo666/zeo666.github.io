@@ -47,7 +47,7 @@ $(function () {
         handleFiles("#" + $(this).attr('id'), this.files);
     });
 
-    $("form").on("submit", function (event) {
+    $("#hatform").on("submit", function (event) {
         //alert("Handler for `submit` called.");
 
         var author = $("#author").val();
@@ -106,6 +106,93 @@ $(function () {
             myObj["climbresource"] = climb_image.replace('C:\\fakepath\\', '');
             myObj["reshashc"] = climb_image_md5;
         }
+
+        const container = document.createElement("div");
+        const pre = document.createElement("pre");
+        pre.className = "line-numbers";
+
+        const code = document.createElement("code");
+        code.className = "language-json";
+        code.textContent = JSON.stringify(myObj, null, '\t');
+
+        pre.appendChild(code);
+        container.appendChild(pre);
+
+        $("#json").append(container);
+
+        Prism.highlightAll();
+
+        event.preventDefault();
+    });
+
+    $("#visorform").on("submit", function (event) {
+        //alert("Handler for `submit` called.");
+
+        var author = $("#author").val();
+        var name = $("#name").val();
+        var package = $("#package").val();
+        var adaptive = $("#adaptive").is(':checked');
+
+        var main_image = $("#main-image").val();
+        var main_image_md5 = $("#main-image-md5").html();
+        var flip_image = $("#flip-image").val();
+        var flip_image_md5 = $("#flip-image-md5").html();
+
+        var myObj = {};
+        myObj["author"] = author;
+        myObj["name"] = name;
+        myObj["package"] = package;
+
+        if (adaptive == true)
+            myObj["adaptive"] = adaptive;
+
+        myObj["resource"] = main_image.replace('C:\\fakepath\\', '');
+        myObj["reshasha"] = main_image_md5;
+
+        ////.replace('C:\\fakepath\\', '');
+
+        if (flip_image != "") {
+            myObj["flipresource"] = flip_image.replace('C:\\fakepath\\', '');
+            myObj["reshashf"] = flip_image_md5;
+        }
+
+        const container = document.createElement("div");
+        const pre = document.createElement("pre");
+        pre.className = "line-numbers";
+
+        const code = document.createElement("code");
+        code.className = "language-json";
+        code.textContent = JSON.stringify(myObj, null, '\t');
+
+        pre.appendChild(code);
+        container.appendChild(pre);
+
+        $("#json").append(container);
+
+        Prism.highlightAll();
+
+        event.preventDefault();
+    });
+
+    $("#nameplateform").on("submit", function (event) {
+        //alert("Handler for `submit` called.");
+
+        var author = $("#author").val();
+        var name = $("#name").val();
+        var package = $("#package").val();
+
+        var main_image = $("#main-image").val();
+        var main_image_md5 = $("#main-image-md5").html();
+
+        var myObj = {};
+        myObj["author"] = author;
+        myObj["name"] = name;
+        myObj["package"] = package;
+
+        myObj["resource"] = main_image.replace('C:\\fakepath\\', '');
+        myObj["reshasha"] = main_image_md5;
+
+        ////.replace('C:\\fakepath\\', '');
 
         const container = document.createElement("div");
         const pre = document.createElement("pre");
