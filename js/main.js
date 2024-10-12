@@ -73,13 +73,13 @@ $(function () {
         myObj["name"] = name;
         myObj["package"] = package;
 
-        if (adaptive)
+        if (adaptive == true)
             myObj["adaptive"] = adaptive;
 
-        if (bounce)
+        if (bounce == true)
             myObj["bounce"] = bounce;
 
-        if (behind)
+        if (behind == true)
             myObj["behind"] = behind;
 
         myObj["resource"] = main_image.replace('C:\\fakepath\\', '');
