@@ -72,9 +72,15 @@ $(function () {
         myObj["author"] = author;
         myObj["name"] = name;
         myObj["package"] = package;
-        myObj["adaptive"] = adaptive;
-        myObj["bounce"] = bounce;
-        myObj["behind"] = behind;
+
+        if (adaptive)
+            myObj["adaptive"] = adaptive;
+
+        if (bounce)
+            myObj["bounce"] = bounce;
+
+        if (behind)
+            myObj["behind"] = behind;
 
         myObj["resource"] = main_image.replace('C:\\fakepath\\', '');
         myObj["reshasha"] = main_image_md5;
@@ -101,14 +107,9 @@ $(function () {
             myObj["reshashc"] = climb_image_md5;
         }
 
-        //var json = '\n' + JSON.stringify(myObj, null, '\t');
-
-        //$("#json").html(json);
-
         const container = document.createElement("div");
         const pre = document.createElement("pre");
         pre.className = "line-numbers";
-
 
         const code = document.createElement("code");
         code.className = "language-json";
