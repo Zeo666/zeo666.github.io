@@ -118,7 +118,7 @@ $(function () {
         pre.appendChild(code);
         container.appendChild(pre);
 
-        $("#json").append(container);
+        $("#json").html(container);
 
         Prism.highlightAll();
 
@@ -167,7 +167,7 @@ $(function () {
         pre.appendChild(code);
         container.appendChild(pre);
 
-        $("#json").append(container);
+        $("#json").html(container);
 
         Prism.highlightAll();
 
@@ -205,7 +205,7 @@ $(function () {
         pre.appendChild(code);
         container.appendChild(pre);
 
-        $("#json").append(container);
+        $("#json").html(container);
 
         Prism.highlightAll();
 
